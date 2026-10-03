@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preserved Original Meta Tags -->
+    <meta name="description" content="Educational framework integrating transversal skills and reflective practice.">
+    <meta name="theme-color" content="#2c3e50">
+    <title>L6 Transversal Framework</title>
+
+    <!-- Preserved Original Font Definitions -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* L6 Transversal Skills Styles */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .skills-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Self-Directed Credit Mosaic Styles */
+        .mosaic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .mosaic-tile {
+            background: var(--accent-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .mosaic-tile:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Three-Mirror Kaleidoscope Styles */
+        .kaleidoscope-wrapper {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .mirror-facet {
+            flex: 1;
+            background: #edf2f7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 3rem;">
+            <h1>Framework Dashboard</h1>
+        </header>
+
+        <!-- L6 Transversal Skills Framework -->
+        <section id="l6-framework">
+            <h2>L6 Transversal Skills</h2>
+            <p>Core competencies required for dynamic problem solving and adaptation.</p>
+            <ul class="skills-list">
+                <li>Systems Thinking & Complex Analysis</li>
+                <li>Cross-Disciplinary Synthesis</li>
+                <li>Ethical Decision Making</li>
+                <li>Strategic Foresight</li>
+            </ul>
+        </section>
+
+        <!-- Self-Directed Credit Mosaic -->
+        <section id="credit-mosaic">
+            <h2>Self-Directed Credit Mosaic</h2>
+            <p>Select and arrange modules to construct a personalized competency profile.</p>
+            <div class="mosaic-grid">
+                <div class="mosaic-tile">Project Leadership</div>
+                <div class="mosaic-tile">Data Literacy</div>
+                <div class="mosaic-tile">Design Thinking</div>
+                <div class="mosaic-tile">Global Dynamics</div>
+            </div>
+        </section>
+
+        <!-- Three-Mirror Kaleidoscope -->
+        <section id="kaleidoscope">
+            <h2>Three-Mirror Kaleidoscope</h2>
+            <p>Reflective practice viewed through intersecting analytical lenses.</p>
+            <div class="kaleidoscope-wrapper">
+                <div class="mirror-facet">
+                    <h3>Facet I: Self</h3>
+                    <p>Intrinsic motivations, personal biases, and individual growth trajectories.</p>
+                </div>
+                <div class="mirror-facet">
+                    <h3>Facet II: Peer</h3>
+                    <p>Collaborative dynamics, interpersonal communication, and team impact.</p>
+                </div>
+                <div class="mirror-facet">
+                    <h3>Facet III: System</h3>
+                    <p>Structural environments, institutional feedback loops, and macro-level outcomes.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
