@@ -119,25 +119,58 @@ footer p{max-width:70ch;margin-bottom:8px}
 
 
 /* ===== portal style: blue top bar, clover logo, portal buttons ===== */
-:root{--bar-bg:#00649A;--signin-bg:#FFFFFF;--signin-text:#00649A}
-@media (prefers-color-scheme:dark){:root{--bar-bg:#0A4F7A;--signin-bg:#171E25;--signin-text:#E7ECEF}}
-.bar{position:sticky;top:0;z-index:20;background:var(--bar-bg);color:#fff}
-.bar-in{max-width:940px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:"Open Sans",system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.06em}
-.clover{width:36px;height:36px;flex:none}
-.clover .lf{stroke:var(--bar-bg);stroke-width:.8}
-.clover .lf.a{fill:#FFFFFF}
-.clover .lf.b{fill:#BFE1F6}
-.clover .stem{stroke:#FFFFFF}
-.clover .mid{fill:var(--bar-bg)}
-@media (prefers-reduced-motion:no-preference){.clover{transition:transform .35s cubic-bezier(.2,.8,.25,1)}.logo:hover .clover{transform:rotate(20deg)}}
-.signin{display:inline-block;background:var(--signin-bg);color:var(--signin-text);font-weight:700;font-size:15px;line-height:1.2;text-decoration:none;padding:9px 16px;border-radius:10px}
-.signin:hover{opacity:.9}
-.bar a:focus-visible{outline:2px solid #fff;outline-offset:3px}
-header{padding-top:56px}
-.btn{background:var(--bar-bg);border:1px solid var(--bar-bg);color:#fff;border-radius:10px;font-weight:700}
-.btn.ghost{background:transparent;color:var(--fe);border-color:color-mix(in srgb,var(--fe) 45%,transparent)}
-.btn.ghost:hover{border-color:var(--fe)}
+:root {
+    --bar-bg: #00649A;
+    --signin-bg: #00649A;
+    --signin-text: #FFFFFF;
+    --signin-border: #FFFFFF; /* Исправлена запятая на точку с запятой */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bar-bg: #0A4F7A;
+        --signin-bg: #171E25;
+        --signin-text: #E7ECEF;
+        --signin-border: #E7ECEF; /* Добавлена рамка для темной темы (по желанию) */
+    }
+}
+
+.bar { position: sticky; top: 0; z-index: 20; background: var(--bar-bg); color: #fff; }
+.bar-in { max-width: 940px; margin: 0 auto; padding: 12px 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-family: "Open Sans", system-ui, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: .06em; }
+
+.clover { width: 36px; height: 36px; flex: none; }
+.clover .lf { stroke: var(--bar-bg); stroke-width: .8; }
+.clover .lf.a { fill: #FFFFFF; }
+.clover .lf.b { fill: #BFE1F6; }
+.clover .stem { stroke: #FFFFFF; }
+.clover .mid { fill: var(--bar-bg); }
+
+@media (prefers-reduced-motion: no-preference) {
+    .clover { transition: transform .35s cubic-bezier(.2, .8, .25, 1); }
+    .logo:hover .clover { transform: rotate(20deg); }
+}
+
+.signin {
+    display: inline-block;
+    background: var(--signin-bg);
+    color: var(--signin-text);
+    border: 1px solid var(--signin-border); /* Добавлено применение рамки */
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.2;
+    text-decoration: none;
+    padding: 8px 15px; /* Слегка уменьшен padding, чтобы компенсировать 1px рамки */
+    border-radius: 10px;
+}
+
+.signin:hover { opacity: .9; }
+.bar a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+header { padding-top: 56px; }
+
+.btn { background: var(--bar-bg); border: 1px solid var(--bar-bg); color: #fff; border-radius: 10px; font-weight: 700; }
+.btn.ghost { background: transparent; color: var(--fe); border-color: color-mix(in srgb, var(--fe) 45%, transparent); }
+.btn.ghost:hover { border-color: var(--fe); }
 
 /* ===== portal typography: Open Sans, heavier headings ===== */
 h1{font-size:clamp(26px,3.6vw,34px);font-weight:700;line-height:1.15;letter-spacing:-.01em;max-width:22ch}
@@ -151,7 +184,7 @@ h3{font-weight:700}
 <body>
 <div class="bar"><div class="bar-in">
   <a class="logo" href="#"><svg class="clover" aria-hidden="true" focusable="false" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path class="stem" d="M24 27C24 34 26.5 40 31 45" fill="none" stroke-width="2.6" stroke-linecap="round"/><g transform="translate(24 23)"><path class="lf a" transform="rotate(-45)" d="M0 0C-2-4-9-8-9-14C-9-19-4-21 0-17C4-21 9-19 9-14C9-8 2-4 0 0Z"/><path class="lf b" transform="rotate(45)" d="M0 0C-2-4-9-8-9-14C-9-19-4-21 0-17C4-21 9-19 9-14C9-8 2-4 0 0Z"/><path class="lf a" transform="rotate(135)" d="M0 0C-2-4-9-8-9-14C-9-19-4-21 0-17C4-21 9-19 9-14C9-8 2-4 0 0Z"/><path class="lf b" transform="rotate(225)" d="M0 0C-2-4-9-8-9-14C-9-19-4-21 0-17C4-21 9-19 9-14C9-8 2-4 0 0Z"/><circle class="mid" r="1.8"/></g></svg><span>FEONA</span></a>
-  <a class="signin" href="https://portal.feona.eu">login / register</a>
+  <a class="signin" href="https://portal.feona.eu">Login / Register</a>
 </div></div>
 
 <div class="wrap">
